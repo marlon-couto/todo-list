@@ -1,6 +1,7 @@
 const criarTarefa = document.querySelector('#criar-tarefa');
 const listaDeTarefas = document.querySelector('#lista-tarefas');
 const redefinir = document.querySelector('#apaga-tudo');
+const removerFinalizados = document.querySelector('#remover-finalizados');
 
 criarTarefa.addEventListener('click', () => {
   const textoDaTarefa = document.querySelector('#texto-tarefa');
@@ -30,4 +31,9 @@ listaDeTarefas.addEventListener('dblclick', (event) => {
 
 redefinir.addEventListener('click', () => {
   listaDeTarefas.innerHTML = '';
+});
+
+removerFinalizados.addEventListener('click', () => {
+  const tarefasFinalizadas = document.querySelectorAll('li.completed');
+  
 });
