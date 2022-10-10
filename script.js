@@ -28,7 +28,7 @@ listaDeTarefas.addEventListener('dblclick', (event) => {
 });
 
 const redefinir = document.querySelector('#apaga-tudo');
+
 redefinir.addEventListener('click', () => {
   listaDeTarefas.innerHTML = '';
 });
-
