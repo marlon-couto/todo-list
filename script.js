@@ -1,5 +1,6 @@
 const criarTarefa = document.querySelector('#criar-tarefa');
 const listaDeTarefas = document.querySelector('#lista-tarefas');
+const redefinir = document.querySelector('#apaga-tudo');
 
 criarTarefa.addEventListener('click', () => {
   const textoDaTarefa = document.querySelector('#texto-tarefa');
@@ -20,14 +21,12 @@ listaDeTarefas.addEventListener('click', (event) => {
 });
 
 listaDeTarefas.addEventListener('dblclick', (event) => {
-  if (event.target.className !== 'completed') {
-    event.target.classList.add('completed');
-  } else {
+  if (event.target.className === 'completed') {
     event.target.classList.remove('completed');
+  } else {
+    event.target.classList.add('completed');
   }
 });
-
-const redefinir = document.querySelector('#apaga-tudo');
 
 redefinir.addEventListener('click', () => {
   listaDeTarefas.innerHTML = '';
