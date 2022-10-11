@@ -35,5 +35,9 @@ redefinir.addEventListener('click', () => {
 
 removerFinalizados.addEventListener('click', () => {
   const tarefasFinalizadas = document.querySelectorAll('li.completed');
-  
+  for (let index = 0; index < tarefasFinalizadas.length; index += 1) {
+    listaDeTarefas.removeChild(tarefasFinalizadas[index]);
+  }
 });
+
+
